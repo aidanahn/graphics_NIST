@@ -40,7 +40,7 @@ for name, kVp, Mo, Rh, Al, mA in params:
     plt.plot(spectra[0], spectra[1])
     plt.xlabel("Energy (keV)", fontsize=18, labelpad=24)
     plt.ylabel("Fluence (cm⁻² keV⁻¹)", fontsize=18, labelpad=24)
-    plt.title(f"{name}", fontsize=24, pad=24)
+    plt.title(f"Beam Code: {name}", fontsize=24, pad=24)
     plt.savefig(f"./results/{name}.png")
     plt.clf()
 
