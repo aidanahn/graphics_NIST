@@ -41,7 +41,7 @@ for name, kVp, Mo, Rh, Al, mA in params:
     plt.xlabel("Energy (keV)", fontsize=18, labelpad=24)
     plt.ylabel("Fluence (cm⁻² keV⁻¹)", fontsize=18, labelpad=24)
     plt.title(f"Beam Code: {name} (SpekPy v2.0)", fontsize=24, pad=24)
-    plt.savefig(f"./results/{name}.png")
+    plt.savefig(f"./results/{name}!.png")
     plt.clf()
 
 
