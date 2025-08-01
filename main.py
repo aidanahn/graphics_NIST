@@ -2,6 +2,7 @@ import spekpy as sp
 import matplotlib.pyplot as plt
 import os 
 import shutil
+from matplotlib import rc
 
 # Name, kVp, Mo, Rh, Al, mA
 params = (("Mo_Mo23", 23, 0.032, 0, 0, 10), 
@@ -34,8 +35,14 @@ for name, kVp, Mo, Rh, Al, mA in params:
     )
     spectra = spek_instance.get_spectrum()
 
+    plt.rcParams.update({'font.size': 18})
+    plt.figure(figsize=(12, 9))
     plt.plot(spectra[0], spectra[1])
-    plt.xlabel("Energy (keV)")
-    plt.ylabel("Fluence (cm⁻² keV⁻¹)")
+    plt.xlabel("Energy (keV)", fontsize=18, labelpad=24)
+    plt.ylabel("Fluence (cm⁻² keV⁻¹)", fontsize=18, labelpad=24)
+    plt.title(f"{name}", fontsize=24, pad=24)
     plt.savefig(f"./results/{name}.png")
     plt.clf()
+
+
+
